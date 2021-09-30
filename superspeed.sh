@@ -74,7 +74,7 @@ checkwget() {
 checkspeedtest() {
 	if  [ ! -e './speedtest-cli/speedtest' ]; then
 		echo "正在安装 Speedtest-cli"
-		wget --no-check-certificate -qO speedtest.tgz https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-$(uname -m)-linux.tgz > /dev/null 2>&1
+		wget --no-check-certificate -qO speedtest.tgz https://install.speedtest.net/app/cli/ookla-speedtest-1.0.0-x86_64-linux.tgz > /dev/null 2>&1
 	fi
 	mkdir -p speedtest-cli && tar zxvf speedtest.tgz -C ./speedtest-cli/ > /dev/null 2>&1 && chmod a+rx ./speedtest-cli/speedtest
 }
@@ -110,7 +110,7 @@ preinfo() {
 	echo "———————————————————SuperSpeed 全面测速版——————————————————"
 	echo "       bash <(curl -Lso- https://git.io/superspeed)"
 	echo "       全部节点列表:  https://git.io/superspeedList"
-	echo "       节点更新: 2020/04/09  | 脚本更新: 2020/04/09"
+	echo "       节点更新: 2020/04/09  | 脚本更新: 2021/04/09"
 	echo "——————————————————————————————————————————————————————————"
 }
 
